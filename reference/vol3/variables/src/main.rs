@@ -1,0 +1,17 @@
+use std::mem;
+
+fn main() {
+    scoped_variables()
+}
+
+fn scoped_variables() {
+    let x = 5;
+    let x = x + 1;
+
+    {
+        let x = x * 2;
+        println!("The value of x in the inner scope is {x}");
+    }
+
+    println!("The value of x in the outer scope is {x}");
+}
